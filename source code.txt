@@ -1,0 +1,89 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/*
+project: "weather app"
+name   : sharmila.P
+college: vivekanandha college of engineering for women
+
+data used:
+1) email
+2) location
+3) current location
+
+methods used:
+1) string
+2) switch case
+*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string email, loc, report;
+    cout << "WEATHER APP\n";
+    cout << "Email id: ";
+    cin >> email;
+    cout << "Current location: ";
+    cin >> loc;
+    cout << "Do you want the weather for a day or for the week? (Enter 'day' or 'week'): ";
+    cin >> report;
+
+    cout << "The " << report << " report for " << loc << " is:\n";
+
+    switch (report[0]) {
+        case 'd':
+        case 'D': {
+            int date;
+            cout << "Enter date: ";
+            cin >> date;
+            cout << "WEATHER: Sunny\n";
+            cout << "TEMPERATURE:\n";
+            cout << "High: 75°F\n";
+            cout << "Low: 55°F\n";
+            break;
+        }
+        case 'w':
+        case 'W': {
+            cout << "Date: 01.05.2023\n";
+            cout << "Climate: Sunny\n";
+            cout << "High: 75°F\n";
+            cout << "Low: 55°F\n\n";
+            cout << "Date: 02.05.2023\n";
+            cout << "Climate: Cloudy\n";
+            cout << "High: 70°F\n";
+            cout << "Low: 52°F\n\n";
+            cout << "Date: 03.05.2023\n";
+            cout << "Climate: Rainy\n";
+            cout << "High: 62°F\n";
+            cout << "Low: 49°F\n\n";
+            cout << "Date: 04.05.2023\n";
+            cout << "Climate: Cloudy\n";
+            cout << "High: 70°F\n";
+            cout << "Low: 52°F\n\n";
+            cout << "Date: 05.05.2023\n";
+            cout << "Climate: Thunderstorm\n";
+            cout << "High: 70°F\n";
+            cout << "Low: 42°F\n\n";
+            cout << "Date: 06.05.2023\n";
+            cout << "Climate: Dry\n";
+            cout << "High: 70°F\n";
+            cout << "Low: 52°F\n\n";
+            cout << "Date: 07.05.2023\n";
+            cout << "Climate: Sunny\n";
+            cout << "High: 70°F\n";
+            cout << "Low: 52°F\n";
+            break;
+        }
+        default:
+            cout << "Invalid report type entered\n";
+    }
+
+    return 0;
+}
